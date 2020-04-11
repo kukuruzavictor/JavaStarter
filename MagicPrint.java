@@ -34,9 +34,11 @@ public class MagicPrint {
     public static String wordRequest(){
         Scanner in = new Scanner(System.in);
         String word = in.nextLine();
+        word = word.trim();
         while (word.length()!=4){
             System.out.print ("Спробуйте ще раз! Слово з ЧОТИРЬОХ букв: ");
             word = in.nextLine();
+            word = word.trim();
         }
         return word;
     }
@@ -98,8 +100,13 @@ public class MagicPrint {
             letterLine[2] = "  " + letter + "   " + letter + "  ";
             letterLine[3] = "   " + letter + " " + letter + "   ";
             letterLine[4] = "    " + letter + "    ";
-        }
-        else{
+        } else if(letter==' '){
+            letterLine[0] = "         ";
+            letterLine[1] = "         ";
+            letterLine[2] = "  – – –  ";
+            letterLine[3] = "         ";
+            letterLine[4] = "         ";
+        } else{
             letterLine[0] = "         ";
             letterLine[1] = "         ";
             letterLine[2] = "  "+letter+" "+letter+" "+letter+"  ";
