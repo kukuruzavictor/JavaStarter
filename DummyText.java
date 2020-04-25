@@ -113,7 +113,6 @@ public class DummyText {
         return consonantText;
     }
 
-    // метод виконує також заміну голосних використовуючи toConsonant()
     public static String toUpperCase(String text){
         String [] sentenceArray = text.split("[.]");
         String upperText = "";
